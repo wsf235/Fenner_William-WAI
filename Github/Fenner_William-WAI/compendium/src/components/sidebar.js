@@ -9,14 +9,65 @@ import FaSearch from 'react-icons/lib/fa/search'
 import FaHeart from 'react-icons/lib/fa/heart'
 
 class Sidebar extends Component{
+
+    componentDidMount () {
+        const script = document.createElement("script");
+
+        //script.src = "../src/js/functions.js";
+        //script.async = true;
+
+        script.innerHTML = "var dropdown = document.getElementsByClassName('d-down-button');";
+        script.innerHTML +="var i;";
+
+        script.innerHTML +="for (i = 0; i < dropdown.length; i++) {";
+        script.innerHTML +="dropdown[i].addEventListener('click', function() {";
+        script.innerHTML +=       "this.classList.toggle('active');";
+        script.innerHTML +=       "var dropdownContent = this.nextElementSibling;";
+        script.innerHTML +=       "if (dropdownContent.style.display === 'block') {";
+        script.innerHTML +=            "dropdownContent.style.display = 'none';";
+        script.innerHTML +=       "} else {";
+        script.innerHTML +=            "dropdownContent.style.display = 'block';";
+        script.innerHTML +=       "}";
+        script.innerHTML +=    "});";
+        script.innerHTML +="}";
+
+        document.body.appendChild(script);
+
+
+    }
+
     render(){
         return(
-            <nav className="">
-                <NavLink to="/Profiles"><FaHome /> Home - Top Recipes</NavLink>
-                <NavLink to="/Bestiary"><FaSearch /> Search</NavLink>
-                <NavLink to="/Locations"><FaHeart /> Your Recipes</NavLink>
-                <NavLink to="/Incident-Report"><FaHeart /> Your Recipes</NavLink>
-
+            <nav className="side-bar">
+                <button className="d-down-button">Profiles</button>
+                <div className="dropdown">
+                    <NavLink to="/Profiles">Top</NavLink>
+                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
+                    <NavLink to="/Profiles">Top</NavLink>
+                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
+                    <NavLink to="/Profiles">Top</NavLink>
+                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
+                    <NavLink to="/Profiles">Top</NavLink>
+                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
+                    <NavLink to="/Profiles">Top</NavLink>
+                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
+                    <NavLink to="/Profiles">Top</NavLink>
+                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
+                    <NavLink to="/Profiles">Top</NavLink>
+                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
+                </div>
+                <button className="d-down-button">Bestiary</button>
+                <div className="dropdown">
+                    <NavLink to="/Bestiary/Thearians">Thearians</NavLink>
+                </div>
+                <button className="d-down-button">Locations</button>
+                <div className="dropdown">
+                    <NavLink to="/Locations/The-Maya">Maya of the Forest</NavLink>
+                </div>
+                <button className="d-down-button">Incident Report</button>
+                <div className="dropdown">
+                    <NavLink to="/Incident-Report/Chapter1">Stereve Chapter 1</NavLink>
+                </div>
             </nav>
         );
     }
