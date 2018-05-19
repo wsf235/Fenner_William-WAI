@@ -41,8 +41,8 @@ class Sidebar extends Component{
             <nav className="side-bar">
                 <button className="d-down-button">Profiles</button>
                 <div className="dropdown">
-                    <NavLink to="/Profiles">Top</NavLink>
-                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
+                    <NavLink to="/Incident/BC.txt">Top</NavLink>
+                    <NavLink to="/Incident/ANO_EE.txt">Orenglaive</NavLink>
                     <NavLink to="/Profiles">Top</NavLink>
                     <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
                     <NavLink to="/Profiles">Top</NavLink>

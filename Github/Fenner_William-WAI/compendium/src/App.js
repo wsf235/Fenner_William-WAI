@@ -8,7 +8,7 @@ import './App.css';
 import './css/style.css';
 
 import {
-BrowserRouter as Router
+BrowserRouter as Router, Route
 } from 'react-router-dom'
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <Sidebar />
-                <Main />
+                <Route path="/" component={Main}/>
                 <Footer />
             </div>
          </Router>
