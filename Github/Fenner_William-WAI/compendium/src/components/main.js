@@ -2,7 +2,7 @@
  * Created by MasterAnseen on 5/10/18.
  */
 import React, { Component } from 'react'
-import Read_Text from './read_file'
+import Read_text from './read_file'
 import {
     BrowserRouter as Route
 } from 'react-router-dom'
@@ -16,12 +16,14 @@ console.log(window.location.pathname + window.location.search);
 console.log(path2);
 console.log(dot[0]);
 
-
+window.addEventListener("hashchange", function(){
+    window.location.reload(true);
+});
 function getTemplate(templateName) {
     return require("../pages/Incident/"+templateName);
 }
 
-console.log(getTemplate("BC.txt"));
+console.log(getTemplate(path2));
 
 class Main extends Component{
 
@@ -46,10 +48,9 @@ class Main extends Component{
         return(
             <div className="main">
                 <h1>Aul Compendium</h1>
-                {console.log(myTxt)}
-                <Read_Text txt={getTemplate(path2)} />
+                <Read_text txt={getTemplate(path2)} />
                 <p>{5}</p>
-                <Read_Text txt={this.state.myTxt} />
+                <Read_text txt={this.state.myTxt} />
             </div>
         );
     }

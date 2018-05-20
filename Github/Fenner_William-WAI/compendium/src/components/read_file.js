@@ -14,7 +14,7 @@ import React from "react";
  txt={myTxt}
  />
  */
-class Read_Text extends React.Component {
+class Read_text extends React.Component {
     constructor(props) {
         super(props);
 
@@ -32,7 +32,7 @@ class Read_Text extends React.Component {
         txt_file.open("GET", file, false);
         txt_file.onreadystatechange = () => {
             if (txt_file.readyState === 4) {
-                if (txt_file.status === 200 || txt_file.status == 0) {
+                if (txt_file.status === 200 || txt_file.status === 0) {
                     var Text = txt_file.responseText;
                     this.setState({
                         text: Text
@@ -54,4 +54,4 @@ class Read_Text extends React.Component {
     }
 }
 
-export default Read_Text;
+export default Read_text;
