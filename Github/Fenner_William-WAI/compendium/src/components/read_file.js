@@ -14,7 +14,7 @@ import React from "react";
  txt={myTxt}
  />
  */
-class Read_text extends React.Component {
+class Readtext extends React.Component {
     constructor(props) {
         super(props);
 
@@ -54,4 +54,4 @@ class Read_text extends React.Component {
     }
 }
 
-export default Read_text;
+export default Readtext;

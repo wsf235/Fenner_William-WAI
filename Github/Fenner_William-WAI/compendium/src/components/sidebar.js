@@ -4,9 +4,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 
-import FaHome from 'react-icons/lib/ti/home-outline'
-import FaSearch from 'react-icons/lib/fa/search'
-import FaHeart from 'react-icons/lib/fa/heart'
 
 class Sidebar extends Component{
 
@@ -41,8 +38,8 @@ class Sidebar extends Component{
             <nav className="side-bar">
                 <button className="d-down-button">Profiles</button>
                 <div className="dropdown">
-                    <NavLink to="/Incident/BC.txt">Top</NavLink>
-                    <NavLink to="/Incident/ANO_EE.txt">Orenglaive</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Incident/BC.txt">Top</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Incident/ANO_EE.txt">Orenglaive</NavLink>
                     <NavLink to="/Profiles">Top</NavLink>
                     <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
                     <NavLink to="/Profiles">Top</NavLink>
