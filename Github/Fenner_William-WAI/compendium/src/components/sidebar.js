@@ -38,9 +38,9 @@ class Sidebar extends Component{
             <nav className="side-bar">
                 <button className="d-down-button">Profiles</button>
                 <div className="dropdown">
-                    <NavLink onClick={this.forceUpdate} to="/Incident/BC.txt">Top</NavLink>
-                    <NavLink onClick={this.forceUpdate} to="/Incident/ANO_EE.txt">Orenglaive</NavLink>
-                    <NavLink to="/Profiles">Top</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Incident/BC">Top</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Incident/ANO_EE">Orenglaive</NavLink>
+                    <NavLink to="/Prof">Top</NavLink>
                     <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
                     <NavLink to="/Profiles">Top</NavLink>
                     <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
@@ -55,15 +55,20 @@ class Sidebar extends Component{
                 </div>
                 <button className="d-down-button">Bestiary</button>
                 <div className="dropdown">
-                    <NavLink to="/Bestiary/Thearians">Thearians</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Bestiary/WingedThearian">Winged Thearians</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Bestiary/Un-WingedThearian">Non-Winged Thearians</NavLink>
                 </div>
                 <button className="d-down-button">Locations</button>
                 <div className="dropdown">
-                    <NavLink to="/Locations/The-Maya">Maya of the Forest</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Location/The-Maya">Maya of the Forest</NavLink>
                 </div>
                 <button className="d-down-button">Incident Report</button>
                 <div className="dropdown">
-                    <NavLink to="/Incident-Report/Chapter1">Stereve Chapter 1</NavLink>
+                    <NavLink onClick={this.forceUpdate}to="/Incident/Chapter1">Stereve Chapter 1</NavLink>
+                    <NavLink onClick={this.forceUpdate}to="/Incident/Chapter2">Stereve Chapter 2</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Incident/Chapter3">Stereve Chapter 3</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Incident/BC">Bandit Conquerer</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Incident/ANO_EE">Emerald Eyes</NavLink>
                 </div>
             </nav>
         );

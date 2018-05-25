@@ -13,7 +13,7 @@ class Nav extends Component{
         return(
             <nav className="">
                 <NavLink to="/featured"><FaHome /> Home - Top Recipes</NavLink>
-                <NavLink to="/search"><FaSearch /> Search</NavLink>
+                <NavLink to="/submit"><FaSearch /> Search</NavLink>
                 <NavLink to="/storage"><FaHeart /> Your Recipes</NavLink>
             </nav>
         );

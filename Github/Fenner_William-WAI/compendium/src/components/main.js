@@ -40,15 +40,13 @@ class Main extends Component{
 
         this.state = {
             my_path: path2,
-            myTxt: require("../pages/Incident/" + path2)
+            myTxt: require("../pages" + _path + ".txt")
         }
     }
 
-    componentWillReceiveProps(){
-        this.setState({myTxt: require("../pages/Incident/" + this.state.my_path)})
+    componentWillReceiveProps(nextProps){
+        console.log(this.props.name)
     }
-
-
 
     render(){
         return(

@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import Header from './components/header';
 import Sidebar from './components/sidebar';
 import Main from './components/main';
+import Submit from './components/submit-new';
 import Footer from './components/footer';
 //import logo from './logo.svg';
 import './App.css';
 import './css/style.css';
 
 import {
-BrowserRouter as Router, Route
+BrowserRouter as Router, Route, Switch
 } from 'react-router-dom'
 //import {withRouter} from 'react-router'
 
@@ -27,19 +28,14 @@ class App extends Component {
         console.log(dot[0]);
 
         this.state ={
-            true_path: path
+            true_path: path //,
+            //refresh: function(){
+            //    Router.dispatch(location.getCurrentPath(), null)
+            //}
         }
     }
 
-    //componentDidUpdate(prevProps){
-    //    if(this.state.true_path !== path){
-    //        this.route_changed();
-    //    }
-    //}
 
-    route_changed(){
-        console.log("New Route: " + this.state.true_path);
-    }
 
   render() {
     return (
@@ -47,8 +43,12 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <Sidebar />
-                <Main name={path} />
-                {path}
+                <Switch>
+                    <Route exact path="/submit" component={Submit} />
+                    <Route path={this.state.true_path}
+                           render={(props)=> <Main {...props} name={path} />}
+                    />
+                </Switch>
                 <Footer />
             </div>
          </Router>
