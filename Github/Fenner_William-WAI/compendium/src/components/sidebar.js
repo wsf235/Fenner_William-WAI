@@ -38,20 +38,9 @@ class Sidebar extends Component{
             <nav className="side-bar">
                 <button className="d-down-button">Profiles</button>
                 <div className="dropdown">
-                    <NavLink onClick={this.forceUpdate} to="/Incident/BC">Top</NavLink>
-                    <NavLink onClick={this.forceUpdate} to="/Incident/ANO_EE">Orenglaive</NavLink>
-                    <NavLink to="/Prof">Top</NavLink>
-                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
-                    <NavLink to="/Profiles">Top</NavLink>
-                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
-                    <NavLink to="/Profiles">Top</NavLink>
-                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
-                    <NavLink to="/Profiles">Top</NavLink>
-                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
-                    <NavLink to="/Profiles">Top</NavLink>
-                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
-                    <NavLink to="/Profiles">Top</NavLink>
-                    <NavLink to="/Profiles/Orenglaive">Orenglaive</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Profile/Crayn">Crayn Skilite</NavLink>
+                    <NavLink onClick={this.forceUpdate} to="/Profile/Orenglaive">Orenglaive</NavLink>
+                    
                 </div>
                 <button className="d-down-button">Bestiary</button>
                 <div className="dropdown">

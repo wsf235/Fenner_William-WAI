@@ -52,7 +52,6 @@ class Main extends Component{
         return(
             <div className="main">
                 <h1>Aul Compendium</h1>
-                <p>{this.props.name}</p>
                 <Readtext txt={this.state.myTxt} />
             </div>
         );
