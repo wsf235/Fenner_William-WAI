@@ -4,4 +4,4 @@ Read me
 
 ## Built with:
 
-* [Reactjs] (https://reactjs.org/)
+* [Reactjs](https://reactjs.org/)
