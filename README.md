@@ -16,3 +16,4 @@ Each link is disected and used to retrieve the appropriate text file needed to d
 
 #### Note
 Due to unforseen planning issues, the project will be rebuilt with new/updated tools at a later date
+Possibly without reactjs in the future too.
